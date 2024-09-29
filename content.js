@@ -67,6 +67,7 @@ const sections = [
     }
 ];
 
+
 // Cargar el menú y el contenido
 document.addEventListener('DOMContentLoaded', function () {
     const menuItems = document.getElementById('menu-items');
@@ -84,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Crear las secciones
         const sectionElement = document.createElement('section');
         sectionElement.id = section.id;
-        sectionElement.innerHTML = `<h2>${section.title}</h2>${section.content}`;
+        sectionElement.innerHTML = `<h2>${section.title}</h2><p class="typewrite" data-content="${section.content}" data-id="${section.id}"></p>`;
         mainContent.appendChild(sectionElement);
     });
 });
