@@ -8,24 +8,22 @@ document.addEventListener('DOMContentLoaded', function () {
         sidebar.classList.toggle('active');
     });
 
-    // Función para el efecto de escritura
-    function typeEffect(element, content, speed) {
-        let text = '';
+    // Función para el efecto de mostrar línea por línea
+    function showLines(element, content, speed) {
+        const lines = content.split('\n');  // Dividimos el contenido en líneas
         let index = 0;
 
-        function type() {
-            text += content[index];
-            element.innerHTML = text;
-            index++;
-
-            if (index < content.length) {
-                setTimeout(type, speed);
+        function showLine() {
+            if (index < lines.length) {
+                element.innerHTML += lines[index] + '<br>';  // Agregamos cada línea con un salto de línea
+                index++;
+                setTimeout(showLine, speed);  // Esperamos para mostrar la siguiente línea
             }
         }
-        type();
+        showLine();
     }
 
-    // Función para manejar el scroll y transiciones suaves sin bloquear el desplazamiento
+    // Función para manejar el scroll y transiciones suaves
     function handleScroll(event) {
         const direction = event.deltaY > 0 ? 1 : -1;
 
@@ -40,11 +38,11 @@ document.addEventListener('DOMContentLoaded', function () {
             sections[currentSectionIndex].classList.add('active');
         }
 
-        // Iniciar el efecto de escritura si aún no se ha escrito
+        // Iniciar el efecto de mostrar línea por línea si aún no se ha mostrado
         const typewriteElement = sections[currentSectionIndex].querySelector('.typewrite');
         if (typewriteElement && !typewriteElement.classList.contains('typed')) {
             const content = typewriteElement.getAttribute('data-content');
-            typeEffect(typewriteElement, content, 20);  // Aumento de la velocidad a 20ms por letra
+            showLines(typewriteElement, content, 500);  // Ajustamos la velocidad entre líneas
             typewriteElement.classList.add('typed'); // Evitar que se repita el efecto
         }
     }
@@ -54,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const firstTypewrite = sections[currentSectionIndex].querySelector('.typewrite');
     if (firstTypewrite) {
         const content = firstTypewrite.getAttribute('data-content');
-        typeEffect(firstTypewrite, content, 20);  // Aumento de la velocidad inicial a 20ms por letra
+        showLines(firstTypewrite, content, 500);  // Mostrar líneas más rápido
     }
 
     // Evento para permitir el scroll sin bloquear
