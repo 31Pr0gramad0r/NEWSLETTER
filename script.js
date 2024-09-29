@@ -1,11 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar');
     const sections = document.querySelectorAll('section');
-
-    menuToggle.addEventListener('click', function () {
-        sidebar.classList.toggle('active');
-    });
 
     // Función para mostrar cada línea con un efecto desvanecido
     function showLinesWithFade(element, content, speed) {
