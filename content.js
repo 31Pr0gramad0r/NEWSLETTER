@@ -56,20 +56,11 @@ const sections = [
     }
 ];
 
-// Cargar el menú y el contenido
+// Cargar el contenido de las secciones
 document.addEventListener('DOMContentLoaded', function () {
-    const menuItems = document.getElementById('menu-items');
     const mainContent = document.getElementById('main-content');
 
     sections.forEach(section => {
-        // Crear el menú
-        const menuItem = document.createElement('li');
-        const menuLink = document.createElement('a');
-        menuLink.href = `#${section.id}`;
-        menuLink.textContent = section.title;
-        menuItem.appendChild(menuLink);
-        menuItems.appendChild(menuItem);
-
         // Crear las secciones
         const sectionElement = document.createElement('section');
         sectionElement.id = section.id;
