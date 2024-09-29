@@ -7,14 +7,14 @@
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f0f9f0;
+    background-color: #f0f9f0;  /* Verde claro */
     color: #333;
     scroll-behavior: smooth;
     overflow-x: hidden; /* Para evitar scroll horizontal en pantallas pequeñas */
 }
 
 header {
-    background-color: #2ecc71;
+    background-color: #2ecc71;  /* Verde vibrante */
     padding: 1.5em;
     text-align: center;
     color: white;
@@ -109,11 +109,11 @@ section h2 {
     text-align: center;
 }
 
-section p {
+.typewrite {
     font-size: 1.2em;
     line-height: 1.8em;
     color: #7f8c8d;
-    text-align: left;
+    white-space: pre-wrap; /* Para mantener los saltos de línea */
 }
 
 /* Media Queries */
