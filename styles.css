@@ -7,13 +7,13 @@
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f0f0f5;
+    background-color: #f0f9f0;  /* Verde claro */
     color: #333;
     scroll-behavior: smooth;
 }
 
 header {
-    background-color: #3498db;
+    background-color: #2ecc71;  /* Verde vibrante */
     padding: 1.5em;
     text-align: center;
     color: white;
@@ -28,7 +28,7 @@ header h1 {
     position: absolute;
     left: 10px;
     top: 20px;
-    background-color: #2980b9;
+    background-color: #27ae60;  /* Verde oscuro */
     border: none;
     color: white;
     padding: 10px;
@@ -38,7 +38,7 @@ header h1 {
 }
 
 #menu-toggle:hover {
-    background-color: #1f618d;
+    background-color: #1e8449;  /* Hover: Verde más oscuro */
 }
 
 /* Sidebar Styles */
@@ -70,7 +70,7 @@ header h1 {
 }
 
 #sidebar ul li a:hover {
-    color: #3498db;
+    color: #2ecc71;  /* Hover verde */
 }
 
 /* Show Sidebar */
@@ -91,37 +91,15 @@ section {
 
 section h2 {
     font-size: 2.2em;
-    color: #2c3e50;
+    color: #27ae60;  /* Verde oscuro */
     margin-bottom: 1em;
+    text-align: center;
 }
 
 section p {
     font-size: 1.2em;
     line-height: 1.8em;
     color: #7f8c8d;
-}
-/* Sección de Títulos */
-section h2 {
-    font-size: 2.5em;
-    color: #2c3e50;
-    margin-bottom: 1em;
-    text-align: center;
-}
-
-/* Estilo de los párrafos */
-section p {
-    font-size: 1.3em;
-    line-height: 1.8em;
-    color: #7f8c8d;
     margin: 0 10%;
     text-align: justify;
-}
-
-/* Mejorando el header */
-header {
-    background-color: #3498db;
-    padding: 1.5em 0;
-    text-align: center;
-    color: white;
-    font-family: 'Helvetica Neue', sans-serif;
 }
