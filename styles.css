@@ -62,7 +62,7 @@ section p {
 
 /* Diferentes imágenes de fondo para cada sección */
 #disruptiva {
-    background-image: url('fondo.png'); /* Imagen del primer tema */
+    background-image: url('Fondo.png'); /* Imagen del primer tema */
 }
 
 #blockchain-seguridad {
