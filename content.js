@@ -57,15 +57,15 @@ const sections = [
 
 ];
 
-// Cargar el contenido de las secciones
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const mainContent = document.getElementById('main-content');
 
     sections.forEach(section => {
-        // Crear las secciones
         const sectionElement = document.createElement('section');
         sectionElement.id = section.id;
-        sectionElement.innerHTML = `<h2>${section.title}</h2><p class="typewrite">${section.content}</p>`;
+        sectionElement.innerHTML = `<h2>${section.title}</h2><p>${section.content}</p>`;
         mainContent.appendChild(sectionElement);
     });
 });
