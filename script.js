@@ -40,14 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Añadir la clase "active" a la primera sección
-    sections[0].classList.add('active');
-    const firstTypewrite = sections[0].querySelector('.typewrite');
-    if (firstTypewrite) {
-        const content = firstTypewrite.getAttribute('data-content');
-        showLinesWithFade(firstTypewrite, content, 500);  // Mostrar líneas en la primera sección
-    }
-
     // Evento para manejar el scroll
     window.addEventListener('scroll', handleScroll);
 });
