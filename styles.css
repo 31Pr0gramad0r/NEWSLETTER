@@ -101,5 +101,5 @@ section p {
     line-height: 1.8em;
     color: #7f8c8d;
     margin: 0 10%;
-    text-align: justify;
+    text-align: left;  /* Alineación a la izquierda */
 }
