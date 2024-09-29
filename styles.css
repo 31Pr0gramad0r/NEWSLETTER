@@ -9,8 +9,6 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
     background-color: #f0f9f0;
     color: #333;
-    scroll-behavior: smooth;
-    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
 header {
@@ -18,12 +16,10 @@ header {
     padding: 1.5em;
     text-align: center;
     color: white;
-    position: relative;
 }
 
 header h1 {
     font-size: 2.5em;
-    margin: 0;
 }
 
 /* Section Styles */
@@ -34,21 +30,16 @@ main {
 
 section {
     padding: 3em 0;  /* Espaciado entre secciones */
-    opacity: 0;
-    transform: translateY(50px);
+    opacity: 1; /* Hacemos el texto visible de inmediato */
+    transform: translateY(0); /* No aplicamos ningún desplazamiento por defecto */
     transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-section.active {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .typewrite {
     font-size: 1.2em;
     line-height: 1.8em;
     color: #7f8c8d;
-    white-space: pre-wrap; /* Mantener los saltos de línea */
+    white-space: pre-wrap;
 }
 
 /* Efecto de desvanecimiento */
@@ -63,16 +54,5 @@ section.active {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* Media Queries para pantallas pequeñas */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    section {
-        padding: 2em;
     }
 }
