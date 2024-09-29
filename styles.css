@@ -94,12 +94,19 @@ section {
     justify-content: center;
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Reducción del tiempo de transición */
 }
 
 section.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+.typewrite {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    color: #7f8c8d;
+    white-space: pre-wrap;
 }
 
 section h2 {
