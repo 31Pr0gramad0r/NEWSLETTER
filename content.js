@@ -54,6 +54,7 @@ const sections = [
         title: "Identidad Digital Descentralizada",
         content: `Bitcoin Cash tiene el potencial de revolucionar la identidad digital.\nCon blockchain, es posible crear sistemas de identidad que no dependan de gobiernos o empresas privadas.\nEsto ofrece a las personas control total sobre su información personal.\nEjemplo en el mundo real: En Estonia, el gobierno ha comenzado a explorar la creación de una identidad digital basada en la blockchain, permitiendo a los ciudadanos acceder a servicios públicos sin identificarse con métodos tradicionales.`
     }
+
 ];
 
 // Cargar el contenido de las secciones
@@ -64,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Crear las secciones
         const sectionElement = document.createElement('section');
         sectionElement.id = section.id;
-        sectionElement.innerHTML = `<h2>${section.title}</h2><p class="typewrite" data-content="${section.content}"></p>`;
+        sectionElement.innerHTML = `<h2>${section.title}</h2><p class="typewrite">${section.content}</p>`;
         mainContent.appendChild(sectionElement);
     });
 });
