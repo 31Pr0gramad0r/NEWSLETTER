@@ -60,13 +60,50 @@ section p {
     text-align: center;
 }
 
-/* Diferentes imágenes de fondo para cada sección */
-#disruptiva {
-    background-image: url('Fondo.png'); /* Imagen del primer tema */
+/* Fondo dinámico con gradientes */
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f093fb, #f5576c, #4facfe, #00f2fe);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: 'Helvetica Neue', sans-serif;
+    color: #fff;
 }
 
-#blockchain-seguridad {
-    background-image: url('fondo2.png'); /* Imagen del segundo tema */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Más secciones con sus imágenes */
+/* Secciones del contenido */
+main {
+    padding: 2em;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+section {
+    padding: 4em 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+section p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+    color: #ffffff;
+    text-align: center;
+}
