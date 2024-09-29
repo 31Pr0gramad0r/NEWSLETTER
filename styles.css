@@ -7,14 +7,14 @@
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f0f9f0;  /* Verde claro */
+    background-color: #f0f9f0;
     color: #333;
     scroll-behavior: smooth;
-    overflow-x: hidden; /* Para evitar scroll horizontal en pantallas pequeñas */
+    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
 header {
-    background-color: #2ecc71;  /* Verde vibrante */
+    background-color: #2ecc71; /* Verde vibrante */
     padding: 1.5em;
     text-align: center;
     color: white;
@@ -23,69 +23,17 @@ header {
 
 header h1 {
     font-size: 2.5em;
-}
-
-#menu-toggle {
-    position: absolute;
-    left: 10px;
-    top: 20px;
-    background-color: #27ae60;
-    border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 1.2em;
-    border-radius: 5px;
-}
-
-#menu-toggle:hover {
-    background-color: #1e8449;
-}
-
-/* Sidebar Styles */
-#sidebar {
-    position: fixed;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #2c3e50;
-    padding-top: 60px;
-    transition: left 0.3s ease;
-    z-index: 1000;
-}
-
-#sidebar ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-#sidebar ul li {
-    margin: 20px 0;
-}
-
-#sidebar ul li a {
-    color: white;
-    font-size: 1.5em;
-    text-decoration: none;
-}
-
-#sidebar ul li a:hover {
-    color: #2ecc71;
-}
-
-#sidebar.active {
-    left: 0;
+    margin: 0;
 }
 
 /* Section Styles */
 main {
     padding: 2em;
-    margin-left: 250px;
+    margin: 0 auto;
 }
 
 section {
-    padding: 3em 0;  /* Espaciado vertical entre las secciones */
+    padding: 3em 0;  /* Espaciado entre secciones */
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.4s ease, transform 0.4s ease;
@@ -118,16 +66,8 @@ section.active {
     }
 }
 
-/* Media Queries */
+/* Media Queries para pantallas pequeñas */
 @media (max-width: 768px) {
-    #sidebar {
-        width: 200px;
-    }
-
-    main {
-        margin-left: 0;
-    }
-
     header h1 {
         font-size: 1.8em;
     }
