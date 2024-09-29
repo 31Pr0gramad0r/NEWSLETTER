@@ -29,21 +29,26 @@ main {
     max-width: 1200px;
 }
 
+/* Estilo para las secciones con fondo */
 section {
     padding: 4em 0;
-    opacity: 0; /* Oculto inicialmente */
+    color: white; /* Asegura que el texto sea visible sobre la imagen */
+    opacity: 0;
     transform: translateY(50px); /* Movido hacia abajo al cargar */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Imagen fija mientras se hace scroll */
 }
 
 section.visible {
-    opacity: 1; /* Se hace visible */
+    opacity: 1;
     transform: translateY(0); /* Se mueve a su lugar original */
 }
 
 section h2 {
     font-size: 2.5em;
-    color: #2ecc71;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 1.5em;
 }
@@ -51,29 +56,17 @@ section h2 {
 section p {
     font-size: 1.2em;
     margin-bottom: 1.5em;
-    color: #333;
+    color: #ffffff;
     text-align: center;
 }
 
-/* Animación de desvanecimiento */
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Diferentes imágenes de fondo para cada sección */
+#disruptiva {
+    background-image: url('fondo.png'); /* Imagen del primer tema */
 }
 
-/* Diseño responsivo */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.2em;
-    }
-
-    section h2 {
-        font-size: 2em;
-    }
-
-    section p {
-        font-size: 1em;
-    }
+#blockchain-seguridad {
+    background-image: url('fondo2.png'); /* Imagen del segundo tema */
 }
+
+/* Más secciones con sus imágenes */
