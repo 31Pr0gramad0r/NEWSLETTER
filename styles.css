@@ -32,7 +32,6 @@ section {
     padding: 3em 0;  /* Espaciado entre secciones */
     opacity: 1; /* Hacemos el texto visible de inmediato */
     transform: translateY(0); /* No aplicamos ningún desplazamiento por defecto */
-    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .typewrite {
